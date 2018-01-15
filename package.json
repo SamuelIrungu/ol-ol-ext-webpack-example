@@ -1,0 +1,17 @@
+{
+  "name": "ol-ext-ol-webpack-example",
+  "version": "1.0.0",
+  "description": "Example using OpenLayers and ol-ext with Webpack",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "ol": "^4.2.0",
+    "ol-ext": "^1.1.2"
+  }
+}
