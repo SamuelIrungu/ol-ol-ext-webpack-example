@@ -4,7 +4,7 @@ This example demonstrates how  `ol` and `ol-ext` packages can be used with webpa
 
 Clone the project.
 
-    https://github.com/darkscript/ol-ol-ext-webpack-example.git
+    git clone https://github.com/darkscript/ol-ol-ext-webpack-example.git
 
 Install the project dependencies.
 
