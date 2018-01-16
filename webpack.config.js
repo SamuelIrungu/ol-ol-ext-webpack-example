@@ -1,11 +1,11 @@
 const webpack = require('webpack');
 
 module.exports = {
-  devtool: '#source-map',
   entry: './main.js',
   output: {
     filename: 'bundle.js'
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
