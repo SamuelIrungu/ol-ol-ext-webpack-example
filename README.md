@@ -18,3 +18,9 @@ Create a bundle for the browser.
 Open `index.html` to see the result.
 
     open index.html
+    
+ Map with openlayers and ol-ext controls
+ 
+ > [
+    ![](map.PNG?raw=true)
+ ](https://github.com/darkscript/ol-ol-ext-webpack-example)

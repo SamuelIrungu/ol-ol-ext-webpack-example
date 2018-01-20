@@ -8,10 +8,13 @@
   "devDependencies": {
     "css-loader": "^0.28.4",
     "style-loader": "^0.18.2",
-    "webpack": "^3.3.0"
+    "webpack": "^3.10.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1"
   },
   "dependencies": {
-    "ol": "^4.2.0",
-    "ol-ext": "^1.1.2"
+    "ol": "^4.6.4",
+    "ol-ext": "git+https://github.com/darkscript/ol-ext.git"
   }
 }
