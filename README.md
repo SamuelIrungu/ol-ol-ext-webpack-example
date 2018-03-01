@@ -24,3 +24,5 @@ Open `index.html` to see the result.
  > [
     ![](map.PNG?raw=true)
  ](https://github.com/darkscript/ol-ol-ext-webpack-example)
+ 
+For more information, go to ol-ext [examples](http://viglino.github.io/ol-ext/). Also go to to [Openlayers](https://openlayers.org/).

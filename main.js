@@ -1,16 +1,16 @@
 import 'ol/ol.css';
-import 'ol-ext/control/permalinkcontrol.css'
-import 'ol-ext/control/searchphotoncontrol'
+import 'ol-ext/control/Permalink.css'
+import 'ol-ext/control/Search.css'
+import 'ol-ext/control/Swipe.css'
 import Map from 'ol/map';
 import View from 'ol/view';
 import ol_Scaleline from 'ol/control/scaleline'
-import Permalink from 'ol-ext/control/permalinkcontrol';
-import SearchPhoton from 'ol-ext/control/searchphotoncontrol'
+import Permalink from 'ol-ext/control/Permalink';
+import SearchNominatim from 'ol-ext/control/SearchNominatim'
 import ol_layer_Tile from 'ol/layer/tile'
 import ol_source_OSM from 'ol/source/osm'
 import ol_source_Stamen from 'ol/source/stamen'
-import ol_control_Swipe from 'ol-ext/control/swipecontrol';
-import 'ol-ext/control/swipecontrol.css'
+import ol_control_Swipe from 'ol-ext/control/Swipe';
 
 // Layers
 var osm = new ol_layer_Tile({
@@ -31,8 +31,8 @@ var map = new Map({
             target: 'map',
             layers: [osm, stamen, label],
             view: new View({
-              center: [0, 0],
-              zoom: 2
+              center: [0, 30],
+              zoom: 4
             })
           });
 
@@ -46,4 +46,4 @@ ctrl.addLayer(osm, true);
 map.addControl(ctrl);
 map.addControl(new ol_Scaleline())
 map.addControl(new Permalink())
-map.addControl(new SearchPhoton())
+map.addControl(new SearchNominatim())
