@@ -44,6 +44,18 @@ ctrl.addLayer(stamen);
 // OSM on right
 ctrl.addLayer(osm, true);
 map.addControl(ctrl);
+
 map.addControl(new ol_Scaleline())
 map.addControl(new Permalink())
-map.addControl(new SearchNominatim())
+
+// Search control
+const search = new SearchNominatim();
+// Move to the position on selection in the control list
+search.on('select', function(e) {	
+  // console.log(e);
+  map.getView().animate({
+    center: e.coordinate,
+    zoom: Math.max (map.getView().getZoom(),16)
+  });
+});
+map.addControl(search);
