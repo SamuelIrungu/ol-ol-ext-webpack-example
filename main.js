@@ -2,32 +2,32 @@ import 'ol/ol.css';
 import 'ol-ext/control/Permalink.css'
 import 'ol-ext/control/Search.css'
 import 'ol-ext/control/Swipe.css'
-import Map from 'ol/map';
-import View from 'ol/view';
-import ol_Scaleline from 'ol/control/scaleline'
+import Map from 'ol/Map';
+import View from 'ol/View';
+import ScaleLine from 'ol/control/ScaleLine'
 import Permalink from 'ol-ext/control/Permalink';
 import SearchNominatim from 'ol-ext/control/SearchNominatim'
-import ol_layer_Tile from 'ol/layer/tile'
-import ol_source_OSM from 'ol/source/osm'
-import ol_source_Stamen from 'ol/source/stamen'
-import ol_control_Swipe from 'ol-ext/control/Swipe';
+import TileLayer from 'ol/layer/Tile'
+import OSM from 'ol/source/OSM'
+import Stamen from 'ol/source/Stamen'
+import Swipe from 'ol-ext/control/Swipe';
 
 // Layers
-var osm = new ol_layer_Tile({
-  source: new ol_source_OSM()
+let osm = new TileLayer({
+  source: new OSM()
   });
-var stamen = new ol_layer_Tile({
-  source: new ol_source_Stamen({
+let stamen = new TileLayer({
+  source: new Stamen({
     layer: 'watercolor'
   })
   });
-var label = new ol_layer_Tile({
-  source: new ol_source_Stamen({
+let label = new TileLayer({
+  source: new Stamen({
     layer: 'terrain-labels'
   })
   });
 
-var map = new Map({
+let map = new Map({
             target: 'map',
             layers: [osm, stamen, label],
             view: new View({
@@ -37,7 +37,7 @@ var map = new Map({
           });
 
 // Control
-var ctrl = new ol_control_Swipe();
+let ctrl = new Swipe();
 
 // Set stamen on left
 ctrl.addLayer(stamen);
@@ -45,13 +45,13 @@ ctrl.addLayer(stamen);
 ctrl.addLayer(osm, true);
 map.addControl(ctrl);
 
-map.addControl(new ol_Scaleline())
+map.addControl(new ScaleLine())
 map.addControl(new Permalink())
 
 // Search control
 const search = new SearchNominatim();
 // Move to the position on selection in the control list
-search.on('select', function(e) {	
+search.on('select', function(e) {
   // console.log(e);
   map.getView().animate({
     center: e.coordinate,
