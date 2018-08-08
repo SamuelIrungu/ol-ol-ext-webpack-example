@@ -1,15 +1,15 @@
 import 'ol/ol.css';
-import 'ol-ext/control/Permalink.css'
-import 'ol-ext/control/Search.css'
-import 'ol-ext/control/Swipe.css'
+import 'ol-ext/control/Permalink.css';
+import 'ol-ext/control/Search.css';
+import 'ol-ext/control/Swipe.css';
 import Map from 'ol/Map';
 import View from 'ol/View';
-import ScaleLine from 'ol/control/ScaleLine'
+import ScaleLine from 'ol/control/ScaleLine';
 import Permalink from 'ol-ext/control/Permalink';
-import SearchNominatim from 'ol-ext/control/SearchNominatim'
-import TileLayer from 'ol/layer/Tile'
-import OSM from 'ol/source/OSM'
-import Stamen from 'ol/source/Stamen'
+import SearchNominatim from 'ol-ext/control/SearchNominatim';
+import TileLayer from 'ol/layer/Tile';
+import OSM from 'ol/source/OSM';
+import Stamen from 'ol/source/Stamen';
 import Swipe from 'ol-ext/control/Swipe';
 
 // Layers
