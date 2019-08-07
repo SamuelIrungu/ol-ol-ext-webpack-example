@@ -14,27 +14,27 @@ import Swipe from 'ol-ext/control/Swipe';
 
 // Layers
 let osm = new TileLayer({
-  source: new OSM()
-  });
+    source: new OSM()
+});
 let stamen = new TileLayer({
-  source: new Stamen({
-    layer: 'watercolor'
-  })
-  });
+    source: new Stamen({
+        layer: 'watercolor'
+    })
+});
 let label = new TileLayer({
-  source: new Stamen({
-    layer: 'terrain-labels'
-  })
-  });
+    source: new Stamen({
+        layer: 'terrain-labels'
+    })
+});
 
 let map = new Map({
-            target: 'map',
-            layers: [osm, stamen, label],
-            view: new View({
-              center: [0, 30],
-              zoom: 4
-            })
-          });
+    target: 'map',
+    layers: [osm, stamen, label],
+    view: new View({
+        center: [0, 30],
+        zoom: 4
+    })
+});
 
 // Control
 let ctrl = new Swipe();
@@ -45,17 +45,17 @@ ctrl.addLayer(stamen);
 ctrl.addLayer(osm, true);
 map.addControl(ctrl);
 
-map.addControl(new ScaleLine())
-map.addControl(new Permalink())
+map.addControl(new ScaleLine());
+map.addControl(new Permalink());
 
 // Search control
 const search = new SearchNominatim();
 // Move to the position on selection in the control list
-search.on('select', function(e) {
-  // console.log(e);
-  map.getView().animate({
-    center: e.coordinate,
-    zoom: Math.max (map.getView().getZoom(),16)
-  });
+search.on('select', function (e) {
+    // console.log(e);
+    map.getView().animate({
+        center: e.coordinate,
+        zoom: Math.max(map.getView().getZoom(), 16)
+    });
 });
 map.addControl(search);

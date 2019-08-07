@@ -1,22 +1,22 @@
 {
   "name": "ol-ext-ol-webpack-example",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Example using OpenLayers and ol-ext with Webpack",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.3",
-    "babel-preset-env": "^1.6.1",
-    "css-loader": "^0.28.10",
-    "style-loader": "^0.18.2",
-    "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   },
   "dependencies": {
-    "ol": "^5.1.3",
-    "ol-ext": "^3.0.0"
+    "ol": "^6.0.0-beta.12",
+    "ol-ext": "^3.1.4"
   },
   "main": "index.js",
   "repository": "https://github.com/darkscript/ol-ol-ext-webpack-example.git",
