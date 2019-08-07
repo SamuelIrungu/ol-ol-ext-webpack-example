@@ -27,10 +27,5 @@ module.exports = {
                 }
             }
         ]
-    },
-    externals: {
-        jQuery: 'jquery',
-        $: 'jquery',
-        jquery: 'jquery'
     }
 }
