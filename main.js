@@ -11,6 +11,8 @@ import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import Stamen from 'ol/source/Stamen';
 import Swipe from 'ol-ext/control/Swipe';
+import MouseWheelZoom from "ol/interaction/MouseWheelZoom";
+import DoubleClickZoom from "ol/interaction/DoubleClickZoom";
 
 // Layers
 let osm = new TileLayer({
@@ -59,3 +61,14 @@ search.on('select', function (e) {
     });
 });
 map.addControl(search);
+
+let zoomInteraction;
+let interactions = map.getInteractions().getArray();
+
+interactions.forEach((interaction) => {
+    if(interaction instanceof MouseWheelZoom || interaction instanceof DoubleClickZoom) {
+        zoomInteraction = interaction;
+        map.removeInteraction(zoomInteraction);
+    }
+});
+
