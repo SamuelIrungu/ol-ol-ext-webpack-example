@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "ol": "^6.0.0-beta.12",
-    "ol-ext": "^3.1.4"
+    "ol-ext": "^3.1.5"
   },
   "main": "index.js",
   "repository": "https://github.com/darkscript/ol-ol-ext-webpack-example.git",
